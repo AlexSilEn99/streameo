@@ -3,7 +3,7 @@ import Top from "./Top/Top";
 
 function Home() {
     return (
-        <div>
+        <div className="home">
             <Top/>
             <SearchBar/>
         </div>

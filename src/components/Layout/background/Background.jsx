@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import './Background.css'
 
 function Background() {
     let imagePosters = [];
@@ -26,12 +25,12 @@ function Background() {
 
 
     return (
-            <div className="background">
-                <div className="background-grid">
+            <div className="background__frame">
+                <div className="background__grid">
                 {
                     imgList.slice(0, 18).map((posterPath, index) => {
                         return (
-                            <img className="poster-img" key={index} src={"https://image.tmdb.org/t/p/original" + posterPath}/>
+                            <img className="background__poster-img" key={index} src={"https://image.tmdb.org/t/p/original" + posterPath}/>
                         )
                     })
                 }

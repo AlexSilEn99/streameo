@@ -10,10 +10,10 @@ function History() {
     const recommendationsParameters = useFectchRecommendations();
 
     if (movieIds != undefined) return (
-        <div className="mt-4 d-flex bg-black-transparent-fade justify-content-center">
+        <div className="mt-4 d-flex bg-black--gradient-middle justify-content-center">
             <div className="w-50" >
                 <Title />
-                <div className="custom-scrollbar-css" style={{overflowX:"hidden", overflowY:"scroll", maxHeight:"70vh"}}>
+                <div className="custom-scrollbar" style={{overflowX:"hidden", overflowY:"scroll", maxHeight:"70vh"}}>
                 {
                     movieIds.map((movieId) => {
                         return (

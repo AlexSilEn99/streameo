@@ -7,6 +7,8 @@ function SearchBar() {
     function handleChange(e) {
         if (e.target.value.length > 0) {
             fetchSearchResults(e.target.value);
+        } else {
+            setResultParameters({});
         }
     }
 

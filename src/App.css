@@ -3,28 +3,192 @@
   text-align: center;
 }
 
+/* App Background */
+
+.background {
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    animation: fade-in 3s;
+}
+
+.background__frame {
+    transform: perspective(800px) rotate3d(0, 1, 0, -8deg);
+    animation: focus 3s linear both alternate;
+    animation-iteration-count: infinite;
+}
+
+.background__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.background__poster-img {
+    display: flex;
+    height: 37vh;
+}
+
+/* Multiple elements background */
+
+.bg-black--blur {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.bg-black--gradient-up {
+    background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0) 100%);
+}
+
+.bg-black--gradient-down {
+    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, rgba(255,255,255,0) 100%);
+}
+
+.bg-black--gradient-middle {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 10%, rgba(0,0,0,0.65) 90%, rgba(255,255,255,0) 100%);
+}
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+/* Text input */
+
+.form-control {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid #aa1e1e;
+    background-color: transparent !important;
+    border-radius: .2em .2em 0 0;
+    padding: .4em;
+    max-width: 70vh;
+    color: white;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom: .2em solid #FFF;
+}
+
+/* Home */
+.home{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 20%;
+}
+
+/* Streameo Logo */
+
 .logo {
     height: 6em;
-    will-change: filter;
-    transition: filter 300ms;
 }
+
+.logo--header {
+    padding: 1.5em;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Header */
+
+.navbar {
+    transition: all 0.4s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar__brand {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Streameo font */
+
+.silkscreen-regular {
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Streameo main title */
 
 .title {
     color: #fff;
     font-size: 72pt;
 }
 
-.bg-black-transparent {
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
+/* Custom scrollbar */
+
+.custom-scrollbar {
+    overflow-y: scroll;
 }
 
-.bg-black-transparent-fade {
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 10%, rgba(0,0,0,0.65) 90%, rgba(255,255,255,0) 100%);
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
 }
 
-.form-control:focus {
-    box-shadow: none;
-    border-bottom: .2em solid #FFF;
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #d62828;
+}
+
+/* Keyframes */
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.4;
+    }
+}
+
+@keyframes focus {
+    from {
+        filter: blur( 0.5rem );
+        opacity: 1;
+    }
+
+    to {
+        filter: blur( 0rem );
+        opacity: 0.7;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.95);
+    }
 }

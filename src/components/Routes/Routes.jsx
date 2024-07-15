@@ -10,7 +10,7 @@ function AnimatedRoutes() {
 
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/streameo/" element={<Home />} />
             <Route path="/streameo/" element={<Home />} />
             <Route path="/Discover" element={<Discover />} />
             <Route path="/MyHistory" element={<History />} />

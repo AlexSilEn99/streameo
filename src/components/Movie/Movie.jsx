@@ -110,7 +110,7 @@ function Movie() {
     }
 
   return (
-      <div className="d-flex bg-black-transparent-fade justify-content-center">
+      <div className="d-flex bg-black--gradient-middle justify-content-center">
           <div className="row w-75 p-4">
               {posterParameters && <Poster parameters={posterParameters} />}
               <div className="col mt-4">

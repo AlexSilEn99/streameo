@@ -8,7 +8,7 @@ function AboutUs() {
     const recommendationsParameters = useFectchRecommendations();
 
     return (
-        <div className="d-flex bg-black-transparent-fade justify-content-center">
+        <div className="d-flex bg-black--gradient-middle justify-content-center">
             <div className="w-50">
                 <Title />
                 <Description />

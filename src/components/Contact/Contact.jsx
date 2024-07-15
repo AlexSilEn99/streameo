@@ -28,7 +28,7 @@ function Contact() {
     }, []);
 
   return (
-      <div className="d-flex bg-black-transparent-fade justify-content-center">
+      <div className="d-flex bg-black--gradient-middle justify-content-center">
           <div className="w-50">
               <Title />
               <div className="mb-4 mt-4">

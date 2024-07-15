@@ -69,10 +69,10 @@ function Discover() {
     }, []);
 
   return (
-      <div className="d-flex bg-black-transparent-fade justify-content-center">
+      <div className="d-flex bg-black--gradient-middle justify-content-center">
           <div className="w-50">
               <Title />
-              <div className="custom-scrollbar-css" style={{ overflowX: "hidden", overflowY: "scroll", maxHeight: "70vh" }}>
+              <div className="custom-scrollbar" style={{ overflowX: "hidden", overflowY: "scroll", maxHeight: "70vh" }}>
                   <div className="mb-4 mt-4">
                       <p className="h5 text-start"><b>Looking for adventure and action?</b></p>
                       {actionAdventureParameters && <Recommendations parameters={actionAdventureParameters} />}

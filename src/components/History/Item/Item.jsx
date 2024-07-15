@@ -54,7 +54,7 @@ function Item(parameters) {
                 <div className="col col-sm-2 text-center m-2">
                     <img className="img-fluid" key={"Movie_poster"} src={"https://image.tmdb.org/t/p/original" + movieDetails.posterPath} />
                 </div>
-                <div className="col col-sm-6 bg-black-transparent mt-2 mb-2">
+                <div className="col col-sm-6 bg-black--blur mt-2 mb-2">
                     <div className="container d-flex h-100">
                         <div className="row justify-content-start align-self-center">
                             <div className="d-flex justify-content-start">
